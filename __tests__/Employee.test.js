@@ -16,6 +16,7 @@ describe("Employee", () => {
             expect(obj.getName()).toEqual('Lyndsie');
             expect(obj.getId()).toEqual('45');
             expect(obj.getEmail()).toEqual('lyndsielane@yahoo.com');
+            expect(obj.getRole()).toEqual('Employee');
         });
     });
 });

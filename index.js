@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 const employees = [];
 
@@ -76,7 +78,7 @@ const addNewEmployeeQuestion = [{
 
 async function init() {
     const newManager = await inquirer.prompt(managerQuestions);
-    employees.push({...newManager, employeeType: 'manager'});
+    employees.push(new Manager(newManager.id, newManager.name, newManager.email, newManager.officeNumber));
 
     let addNewEmployee = {};
 
@@ -86,11 +88,11 @@ async function init() {
         switch (addNewEmployee.employeeType) {
             case 'Engineer':
                 const engineerAnswers = await inquirer.prompt(engineerQuestions);
-                employees.push({...engineerAnswers, employeeType: 'engineer'});
+                employees.push(new Engineer(engineerAnswers.id, engineerAnswers.name, engineerAnswers.email, engineerAnswers.github));
                 break;
             case 'Intern':
                 const internAnswers = await inquirer.prompt(internQuestions);
-                employees.push({...internAnswers, employeeType: 'intern'});
+                employees.push(new Intern(internAnswers.id, internAnswers.name, internAnswers.email, internAnswers.school));
                 break;
         }
     }

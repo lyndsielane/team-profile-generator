@@ -1,12 +1,17 @@
+/*setting the colors*/
 :root {
   --main-head-color: #f08362;
   --secondary-color: #43c1e0;
 }
-
+/*styling the header*/
 #title {
     background-color: var(--main-head-color);
     color: white;
     font-size: 30px;
     font-weight: bold;
     margin: 30px;
+}
+
+.card-title, .card-subtitle {
+    background-color: var(--secondary-color);
 }

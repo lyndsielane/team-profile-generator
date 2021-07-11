@@ -1,8 +1,4 @@
-const answers = require("../index")
 
-function renderHtml(employees) {
-//rendering the html page
-return `
 <!DOCTYPE html>
 <html lang="en>
 <head>
@@ -27,18 +23,4 @@ return `
 
 <script src="../index.js"
 </body>
-</html>`
-}
-
-function renderEmployeeDetails () {
- `<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${employee.name}<br>${employee.role}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${employee.id}<hr></h6>
-    <p class="card-text">${employee.email}</p>
-    <p class="card-text">${employee.github}${employee.school}</p>
-  </div>
-</div>`
-}
-
-module.exports = renderHtml;
+</html>

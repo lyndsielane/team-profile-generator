@@ -19,6 +19,7 @@
   "homepage": "https://github.com/lyndsielane/team-profile-generator#readme",
   "dependencies": {
     "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.5.0",
     "inquirer": "^8.1.1",
     "jest": "^27.0.6"
   }

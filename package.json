@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lyndsielane/team-profile-generator#readme",
   "dependencies": {
+    "bootstrap": "^5.0.2",
     "inquirer": "^8.1.1",
     "jest": "^27.0.6"
   }

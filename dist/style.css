@@ -1,0 +1,12 @@
+:root {
+  --main-head-color: #f08362;
+  --secondary-color: #43c1e0;
+}
+
+#title {
+    background-color: var(--main-head-color);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px;
+}

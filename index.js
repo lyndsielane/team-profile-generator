@@ -97,7 +97,7 @@ async function init() {
                 break;
         }
     }
-    fs.writeFile('index.html', renderHtml(employees), (err) => {
+    fs.writeFile('dist/team.html', renderHtml(employees), (err) => {
         if (err) console.log(error);
         else console.log("File successfully created.");
     });

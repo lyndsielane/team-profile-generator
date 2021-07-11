@@ -3,15 +3,30 @@
   --main-head-color: #f08362;
   --secondary-color: #43c1e0;
 }
+
 /*styling the header*/
 #title {
     background-color: var(--main-head-color);
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    margin: 30px;
+    min-height: 200px;
+    text-align: center;
 }
 
-.card-title, .card-subtitle {
-    background-color: var(--secondary-color);
+#title .container-fluid {
+    justify-content: center;
+}
+
+#employeeCards {
+    margin-top: 20px;
+}
+
+.card-header {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-header i {
+    margin-right: 5px;
 }

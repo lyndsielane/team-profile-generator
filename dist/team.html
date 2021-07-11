@@ -1,25 +1,4 @@
-const answers = require("../index")
 
-function renderHtml(employees) {
-    let employeeCards = '';
-
-    employees.forEach(employee => {
-        switch(employee.getRole()) {
-            case "Manager":
-                employeeCards += renderManagerCard(employee);
-                break;
-            case "Engineer":
-                employeeCards += renderEngineerCard(employee);
-                break;
-            case "Intern":
-                employeeCards += renderInternCard(employee);
-                break;
-        }
-    });
-
-
-//rendering the html page
-return `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,35 +25,20 @@ return `
     </div>
     <div class="container">
         <div id="employeeCards">
-            ${employeeCards}
+            
+    <div class="card mb-3" style="max-width: 18rem;">
+        <div class="card-header text-white bg-primary">
+            <p>asdf</p>
+            <p><i class="bi bi-cup-fill"></i>Manager</p>
+        </div>
+        <div class="card-body">
+            <p class="card-title">ID: asdf</p>
+            <hr>
+            <p class="card-text">Email: asdf</p>
+            <p class="card-text">Office number: asdf</p>
+        </div>
+    </div>
         </div>
     </div>
   </body>
-</html>`
-}
-
-function renderManagerCard(manager) {
-    return `
-    <div class="card mb-3" style="max-width: 18rem;">
-        <div class="card-header text-white bg-primary">
-            <p>${manager.getName()}</p>
-            <p><i class="bi bi-cup-fill"></i>${manager.getRole()}</p>
-        </div>
-        <div class="card-body">
-            <p class="card-title">ID: ${manager.getId()}</p>
-            <hr>
-            <p class="card-text">Email: ${manager.getEmail()}</p>
-            <p class="card-text">Office number: ${manager.getOfficeNumber()}</p>
-        </div>
-    </div>`
-}
-
-function renderEngineerCard(engineer) {
-    return "I'm an engineer";
-}
-
-function renderInternCard(intern) {
-    return "I'm an intern";
-}
-
-module.exports = renderHtml;
+</html>

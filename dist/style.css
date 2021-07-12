@@ -45,3 +45,10 @@ hr {
 .card {
     box-shadow: 8px 10px #888888;
 }
+
+#employeeCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: none;
+}

@@ -1,4 +1,4 @@
-const answers = require("../index")
+const answers = require("../index");
 
 function renderHtml(employees) {
     let employeeCards = '';
@@ -48,7 +48,7 @@ return `
         </div>
     </div>
     <div class="container">
-        <div id="employeeCards">
+        <div class = "row" id="employeeCards">
             ${employeeCards}
         </div>
     </div>
@@ -58,7 +58,7 @@ return `
 
 function renderManagerCard(manager) {
     return `
-    <div class="card mb-3" style="max-width: 18rem;">
+    <div class="card mb-3 col-4" style="max-width: 18rem;">
         <div class="card-header text-white bg-primary">
             <p>${manager.getName()}</p>
             <p><i class="bi bi-cup-fill"></i>${manager.getRole()}</p>
@@ -74,7 +74,7 @@ function renderManagerCard(manager) {
 
 function renderEngineerCard(engineer) {
     return `
-    <div class="card mb-3" style="max-width: 18rem;">
+    <div class="card mb-3 col-4" style="max-width: 18rem;">
         <div class="card-header text-white bg-primary">
             <p>${engineer.getName()}</p>
             <p><i class="bi bi-eyeglasses"></i>${engineer.getRole()}</p>
@@ -83,14 +83,14 @@ function renderEngineerCard(engineer) {
             <p class="card-title">ID: ${engineer.getId()}</p>
             <hr>
             <p class="card-text">Email: ${engineer.getEmail()}</p>
-            <p class="card-text">Github: ${manager.getGithub()}</p>
+            <p class="card-text">Github: ${engineer.getGithub()}</p>
         </div>
     </div>`
 }
 
 function renderInternCard(intern) {
     return `
-    <div class="card mb-3" style="max-width: 18rem;">
+    <div class="card mb-3 col-4" style="max-width: 18rem;">
         <div class="card-header text-white bg-primary">
             <p>${intern.getName()}</p>
             <p><i class="bi bi-laptop-fill"></i>${intern.getRole()}</p>

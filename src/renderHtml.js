@@ -73,11 +73,35 @@ function renderManagerCard(manager) {
 }
 
 function renderEngineerCard(engineer) {
-    return "I'm an engineer";
+    return `
+    <div class="card mb-3" style="max-width: 18rem;">
+        <div class="card-header text-white bg-primary">
+            <p>${engineer.getName()}</p>
+            <p><i class="bi bi-eyeglasses"></i>${engineer.getRole()}</p>
+        </div>
+        <div class="card-body">
+            <p class="card-title">ID: ${engineer.getId()}</p>
+            <hr>
+            <p class="card-text">Email: ${engineer.getEmail()}</p>
+            <p class="card-text">Github: ${manager.getGithub()}</p>
+        </div>
+    </div>`
 }
 
 function renderInternCard(intern) {
-    return "I'm an intern";
+    return `
+    <div class="card mb-3" style="max-width: 18rem;">
+        <div class="card-header text-white bg-primary">
+            <p>${intern.getName()}</p>
+            <p><i class="bi bi-laptop-fill"></i>${intern.getRole()}</p>
+        </div>
+        <div class="card-body">
+            <p class="card-title">ID: ${intern.getId()}</p>
+            <hr>
+            <p class="card-text">Email: ${intern.getEmail()}</p>
+            <p class="card-text">Github: ${intern.getSchool()}</p>
+        </div>
+    </div>`
 }
 
 module.exports = renderHtml;

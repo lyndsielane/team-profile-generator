@@ -30,7 +30,7 @@
 }
 
 .card-header i {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 hr {
@@ -48,7 +48,13 @@ hr {
 
 #employeeCards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    flex: none;
+}
+
+.mb-3 {
+    margin-bottom: 40px!important;
+}
+
+.row {
+    --bs-gutter-x: none;
 }

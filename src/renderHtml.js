@@ -99,7 +99,7 @@ function renderInternCard(intern) {
             <p class="card-title">ID: ${intern.getId()}</p>
             <hr>
             <p class="card-text">Email: ${intern.getEmail()}</p>
-            <p class="card-text">Github: ${intern.getSchool()}</p>
+            <p class="card-text">School: ${intern.getSchool()}</p>
         </div>
     </div>`
 }

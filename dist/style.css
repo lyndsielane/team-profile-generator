@@ -2,14 +2,16 @@
 :root {
   --main-head-color: #f08362;
   --secondary-color: #43c1e0;
+  font-family: 'Otomanopee One', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /*styling the header*/
 #title {
     background-color: var(--main-head-color);
     color: white;
-    font-size: 40px;
-    font-weight: bold;
+    font-family: 'Otamanopee One';
+    font-size: 70px;
     min-height: 200px;
     text-align: center;
 }
@@ -24,9 +26,22 @@
 
 .card-header {
     font-size: 25px;
-    font-weight: bold;
+    font-family: 'Otamanopee One';
 }
 
 .card-header i {
     margin-right: 5px;
+}
+
+hr {
+    color: blue;
+}
+
+.card-body {
+    font-family: Raleway;
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 8px 10px #888888;
 }

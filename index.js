@@ -85,23 +85,24 @@ async function init() {
 
     let addNewEmployee = {};
     //looping the questions back through based on the response given to the add more members questions
-    while (addNewEmployee.employeeType !== 'I don\'t want to add any more team members') {
+    while (addNewEmployee.employeeType !== chalk.red("I don\'t want to add any more team members")) {
         addNewEmployee = await inquirer.prompt(addNewEmployeeQuestion);
 
         switch (addNewEmployee.employeeType) {
-            case 'Engineer':
+            case chalk.blueBright('Engineer'):
                 const engineerAnswers = await inquirer.prompt(engineerQuestions);
                 employees.push(new Engineer(engineerAnswers.id, engineerAnswers.name, engineerAnswers.email, engineerAnswers.github));
                 break;
-            case 'Intern':
+            case chalk.green('Intern'):
                 const internAnswers = await inquirer.prompt(internQuestions);
                 employees.push(new Intern(internAnswers.id, internAnswers.name, internAnswers.email, internAnswers.school));
                 break;
         }
     }
+    console.log(chalk.blueBright.bgBlackBright("Generating Team Profiles..."));
     fs.writeFile('dist/team.html', renderHtml(employees), (err) => {
         if (err) console.log(error);
-        else console.log(chalk.cyanBright("File successfully created."));
+        else console.log(chalk.cyanBright.bgBlackBright("File successfully created."));
     });
 }
 //call function to initiate everything

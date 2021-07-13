@@ -66,7 +66,7 @@ function renderManagerCard(manager) {
         <div class="card-body">
             <p class="card-title">ID: ${manager.getId()}</p>
             <hr>
-            <p class="card-text">Email: ${manager.getEmail()}</p>
+            <p class="card-text">Email: <a href="mailTo:${manager.getEmail()}" target="blank"></a>${manager.getEmail()}</p>
             <p class="card-text">Office number: ${manager.getOfficeNumber()}</p>
         </div>
     </div>`
@@ -82,8 +82,8 @@ function renderEngineerCard(engineer) {
         <div class="card-body">
             <p class="card-title">ID: ${engineer.getId()}</p>
             <hr>
-            <p class="card-text">Email: ${engineer.getEmail()}</p>
-            <p class="card-text">Github: ${engineer.getGithub()}</p>
+            <p class="card-text">Email: <a href="mailTo:${engineer.getEmail()}" target="blank"></a>${engineer.getEmail()}</p>
+            <p class="card-text">Github: <a href="http://www.github.com/${engineer.getGithub()}" target="blank"></a>${engineer.getGithub()}</p>
         </div>
     </div>`
 }
@@ -98,7 +98,7 @@ function renderInternCard(intern) {
         <div class="card-body">
             <p class="card-title">ID: ${intern.getId()}</p>
             <hr>
-            <p class="card-text">Email: ${intern.getEmail()}</p>
+            <p class="card-text">Email: <a href="mailTo:${intern.getEmail()}" target="blank"></a>${intern.getEmail()}</p>
             <p class="card-text">School: ${intern.getSchool()}</p>
         </div>
     </div>`
